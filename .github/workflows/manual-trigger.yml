@@ -1,0 +1,20 @@
+name: Manual Trigger Example
+
+on:
+  push:
+    branches:
+      - main
+      - test
+  workflow_dispatch:
+   # You can add other specific patterns or branches here
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run build script
+        run: echo "Building on the selected branch..."
