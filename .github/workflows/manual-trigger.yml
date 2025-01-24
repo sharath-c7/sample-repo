@@ -1,6 +1,10 @@
 name: Manual Trigger Example
 
 on:
+  push:
+    branches:
+      - main
+      - test
   workflow_dispatch:
     branches:
       - main
