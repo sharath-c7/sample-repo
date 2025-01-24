@@ -1,0 +1,19 @@
+name: Manual Trigger Example
+
+on:
+  workflow_dispatch:
+    branches:
+      - main
+      - 'release/*'   # To trigger for any branch that starts with 'release/'
+      - 'feature/*'    # You can add other specific patterns or branches here
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run build script
+        run: echo "Building on the selected branch..."
