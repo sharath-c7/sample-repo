@@ -6,10 +6,7 @@ on:
       - main
       - test
   workflow_dispatch:
-    branches:
-      - main
-      - 'release/*'   # To trigger for any branch that starts with 'release/'
-      - 'feature/*'    # You can add other specific patterns or branches here
+   # You can add other specific patterns or branches here
 
 jobs:
   build:
